@@ -1,191 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+  <!-- Created by Tazhmaganbetov Rakhat and Tauyekel Islam -->
   <title>Catalog | STEPUP Sneaker Store</title>
 
+  <!-- Bootstrap -->
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+  >
+
+  <!-- Our CSS -->
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-<!-- Header and navigation -->
-<header id="main-header">
-  <nav class="navbar">
-    <a class="logo" href="index.html">STEPUP</a>
+<!-- ================= HEADER ================= -->
 
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a class="active" href="catalog.html">Catalog</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<header id="main-header">
+
+  <nav
+          class="navbar bootstrap-nav navbar-expand-lg bg-dark py-3"
+          data-bs-theme="dark"
+          aria-label="Main navigation"
+  >
+
+    <div class="container">
+
+      <!-- Logo -->
+      <a
+              class="navbar-brand text-warning fw-bold fs-3"
+              href="index.html"
+      >
+        STEPUP
+      </a>
+
+      <!-- Mobile menu button -->
+      <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainMenu"
+              aria-controls="mainMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <!-- Navigation -->
+      <div
+              class="collapse navbar-collapse"
+              id="mainMenu"
+      >
+
+        <ul class="navbar-nav ms-auto gap-lg-3">
+
+          <li class="nav-item">
+            <a
+                    class="nav-link"
+                    href="index.html"
+            >
+              Home
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a
+                    class="nav-link active fw-bold"
+                    aria-current="page"
+                    href="catalog.html"
+            >
+              Catalog
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a
+                    class="nav-link"
+                    href="gallery.html"
+            >
+              Gallery
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a
+                    class="nav-link"
+                    href="about.html"
+            >
+              About Us
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a
+                    class="nav-link"
+                    href="contact.html"
+            >
+              Contact
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a
+                    class="nav-link"
+                    href="media-queries.html"
+            >
+              Media Queries
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
   </nav>
+
 </header>
+
+
+<!-- ================= MAIN ================= -->
 
 <main>
 
-  <!-- Catalog introduction -->
+
+  <!-- ================= PAGE BANNER ================= -->
+
   <section class="page-banner">
-    <p class="section-label">OUR COLLECTION</p>
-    <h1>Sneaker Catalog</h1>
+
+    <p class="section-label">
+      OUR COLLECTION
+    </p>
+
+    <h1>
+      Sneaker Catalog
+    </h1>
+
     <p>
       Explore our collection and find sneakers that match your
       style, comfort and daily activities.
     </p>
+
   </section>
 
-  <!-- Product cards -->
-  <section class="catalog-section">
-    <div class="catalog-grid">
 
-      <article class="product-card">
-        <img
-          src="./img/nike-air-max.jpg"
-          alt="Nike Air Max 270 sneakers"
-        >
 
-        <div class="product-info">
-          <p class="product-brand">Nike</p>
-          <h2>Nike Air Max 270</h2>
-          <p>
-            Comfortable everyday sneakers with modern
-            Air cushioning.
-          </p>
-          <p class="product-size">Sizes: 39–44</p>
-          <p class="product-price">65,000 KZT</p>
-          <a class="button product-button" href="contact.html">
-            Order Now
-          </a>
+  <!-- ================= PRODUCT CARDS ================= -->
+
+  <section class="container py-3 py-md-4 py-lg-5">
+
+    <div class="row g-4">
+
+
+      <!-- PRODUCT 1 -->
+
+      <article class="product-card col-12 col-md-6 col-lg-4">
+
+        <div class="card h-100 bg-dark text-white border-secondary">
+
+          <img
+                  src="./img/nike-air-max.jpg"
+                  class="card-img-top sneaker-card-image"
+                  alt="Nike Air Max 270 sneakers"
+          >
+
+          <div class="card-body d-flex flex-column p-3 p-lg-4">
+
+            <p class="product-brand">
+              Nike
+            </p>
+
+            <h2 class="card-title h5">
+              Nike Air Max 270
+            </h2>
+
+            <p>
+              Comfortable everyday sneakers with modern
+              Air cushioning.
+            </p>
+
+            <p class="product-size">
+              Sizes: 39–44
+            </p>
+
+            <p class="product-price">
+              65,000 KZT
+            </p>
+
+            <a
+                    class="btn btn-warning mt-auto align-self-start"
+                    href="contact.html"
+            >
+              Order Now
+            </a>
+
+          </div>
+
         </div>
+
       </article>
 
-      <article class="product-card">
-        <img
-          src="./img/adidas-campus.jpg"
-          alt="Adidas Campus 00s sneakers"
-        >
 
-        <div class="product-info">
-          <p class="product-brand">Adidas</p>
-          <h2>Adidas Campus 00s</h2>
-          <p>
-            Classic lifestyle sneakers with a simple
-            retro design.
-          </p>
-          <p class="product-size">Sizes: 38–43</p>
-          <p class="product-price">58,000 KZT</p>
-          <a class="button product-button" href="contact.html">
-            Order Now
-          </a>
+
+      <!-- PRODUCT 2 -->
+
+      <article class="product-card col-12 col-md-6 col-lg-4">
+
+        <div class="card h-100 bg-dark text-white border-secondary">
+
+          <img
+                  src="./img/adidas-campus.jpg"
+                  class="card-img-top sneaker-card-image"
+                  alt="Adidas Campus 00s sneakers"
+          >
+
+          <div class="card-body d-flex flex-column p-3 p-lg-4">
+
+            <p class="product-brand">
+              Adidas
+            </p>
+
+            <h2 class="card-title h5">
+              Adidas Campus 00s
+            </h2>
+
+            <p>
+              Classic lifestyle sneakers with a simple
+              retro design.
+            </p>
+
+            <p class="product-size">
+              Sizes: 38–43
+            </p>
+
+            <p class="product-price">
+              58,000 KZT
+            </p>
+
+            <a
+                    class="btn btn-warning mt-auto align-self-start"
+                    href="contact.html"
+            >
+              Order Now
+            </a>
+
+          </div>
+
         </div>
+
       </article>
 
-      <article class="product-card">
-        <img
-          src="./img/new-balance.jpg"
-          alt="New Balance 530 sneakers"
-        >
 
-        <div class="product-info">
-          <p class="product-brand">New Balance</p>
-          <h2>New Balance 530</h2>
-          <p>
-            Lightweight sneakers inspired by classic
-            running shoes.
-          </p>
-          <p class="product-size">Sizes: 39–44</p>
-          <p class="product-price">62,000 KZT</p>
-          <a class="button product-button" href="contact.html">
-            Order Now
-          </a>
+
+      <!-- PRODUCT 3 -->
+
+      <article class="product-card col-12 col-md-6 col-lg-4">
+
+        <div class="card h-100 bg-dark text-white border-secondary">
+
+          <img
+                  src="./img/new-balance.jpg"
+                  class="card-img-top sneaker-card-image"
+                  alt="New Balance 530 sneakers"
+          >
+
+          <div class="card-body d-flex flex-column p-3 p-lg-4">
+
+            <p class="product-brand">
+              New Balance
+            </p>
+
+            <h2 class="card-title h5">
+              New Balance 530
+            </h2>
+
+            <p>
+              Lightweight sneakers inspired by classic
+              running shoes.
+            </p>
+
+            <p class="product-size">
+              Sizes: 39–44
+            </p>
+
+            <p class="product-price">
+              62,000 KZT
+            </p>
+
+            <a
+                    class="btn btn-warning mt-auto align-self-start"
+                    href="contact.html"
+            >
+              Order Now
+            </a>
+
+          </div>
+
         </div>
+
       </article>
 
-      <article class="product-card">
-        <img
-          src="./img/nike-air-force.jpg"
-          alt="Nike Air Force 1 white sneakers"
-        >
 
-        <div class="product-info">
-          <p class="product-brand">Nike</p>
-          <h2>Nike Air Force 1</h2>
-          <p>
-            Iconic white sneakers suitable for many
-            casual outfits.
-          </p>
-          <p class="product-size">Sizes: 38–44</p>
-          <p class="product-price">59,000 KZT</p>
-          <a class="button product-button" href="contact.html">
-            Order Now
-          </a>
+
+      <!-- PRODUCT 4 -->
+
+      <article class="product-card col-12 col-md-6 col-lg-4">
+
+        <div class="card h-100 bg-dark text-white border-secondary">
+
+          <img
+                  src="./img/nike-air-force.jpg"
+                  class="card-img-top sneaker-card-image"
+                  alt="Nike Air Force 1 white sneakers"
+          >
+
+          <div class="card-body d-flex flex-column p-3 p-lg-4">
+
+            <p class="product-brand">
+              Nike
+            </p>
+
+            <h2 class="card-title h5">
+              Nike Air Force 1
+            </h2>
+
+            <p>
+              Iconic white sneakers suitable for many
+              casual outfits.
+            </p>
+
+            <p class="product-size">
+              Sizes: 38–44
+            </p>
+
+            <p class="product-price">
+              59,000 KZT
+            </p>
+
+            <a
+                    class="btn btn-warning mt-auto align-self-start"
+                    href="contact.html"
+            >
+              Order Now
+            </a>
+
+          </div>
+
         </div>
+
       </article>
 
-      <article class="product-card">
-        <img
-          src="./img/adidas-forum-low.jpg"
-          alt="Adidas Forum Low sneakers"
-        >
 
-        <div class="product-info">
-          <p class="product-brand">Adidas</p>
-          <h2>Adidas Forum Low</h2>
-          <p>
-            Sport-inspired sneakers with a classic
-            low-top shape.
-          </p>
-          <p class="product-size">Sizes: 39–45</p>
-          <p class="product-price">55,000 KZT</p>
-          <a class="button product-button" href="contact.html">
-            Order Now
-          </a>
+
+      <!-- PRODUCT 5 -->
+
+      <article class="product-card col-12 col-md-6 col-lg-4">
+
+        <div class="card h-100 bg-dark text-white border-secondary">
+
+          <img
+                  src="./img/adidas-forum-low.jpg"
+                  class="card-img-top sneaker-card-image"
+                  alt="Adidas Forum Low sneakers"
+          >
+
+          <div class="card-body d-flex flex-column p-3 p-lg-4">
+
+            <p class="product-brand">
+              Adidas
+            </p>
+
+            <h2 class="card-title h5">
+              Adidas Forum Low
+            </h2>
+
+            <p>
+              Sport-inspired sneakers with a classic
+              low-top shape.
+            </p>
+
+            <p class="product-size">
+              Sizes: 39–45
+            </p>
+
+            <p class="product-price">
+              55,000 KZT
+            </p>
+
+            <a
+                    class="btn btn-warning mt-auto align-self-start"
+                    href="contact.html"
+            >
+              Order Now
+            </a>
+
+          </div>
+
         </div>
+
       </article>
 
-      <article class="product-card">
-        <img
-          src="./img/newbalance574.jpg"
-          alt="New Balance 574 sneakers"
-        >
 
-        <div class="product-info">
-          <p class="product-brand">New Balance</p>
-          <h2>New Balance 574</h2>
-          <p>
-            Versatile sneakers designed for comfort
-            and everyday use.
-          </p>
-          <p class="product-size">Sizes: 40–45</p>
-          <p class="product-price">60,000 KZT</p>
-          <a class="button product-button" href="contact.html">
-            Order Now
-          </a>
+
+      <!-- PRODUCT 6 -->
+
+      <article class="product-card col-12 col-md-6 col-lg-4">
+
+        <div class="card h-100 bg-dark text-white border-secondary">
+
+          <img
+                  src="./img/newbalance574.jpg"
+                  class="card-img-top sneaker-card-image"
+                  alt="New Balance 574 sneakers"
+          >
+
+          <div class="card-body d-flex flex-column p-3 p-lg-4">
+
+            <p class="product-brand">
+              New Balance
+            </p>
+
+            <h2 class="card-title h5">
+              New Balance 574
+            </h2>
+
+            <p>
+              Versatile sneakers designed for comfort
+              and everyday use.
+            </p>
+
+            <p class="product-size">
+              Sizes: 40–45
+            </p>
+
+            <p class="product-price">
+              60,000 KZT
+            </p>
+
+            <a
+                    class="btn btn-warning mt-auto align-self-start"
+                    href="contact.html"
+            >
+              Order Now
+            </a>
+
+          </div>
+
         </div>
+
       </article>
+
 
     </div>
+
   </section>
 
-  <!-- Comparison table -->
+
+
+  <!-- ================= COMPARISON TABLE ================= -->
+
   <section class="comparison-section">
+
     <div class="section-heading">
-      <p class="section-label">QUICK COMPARISON</p>
-      <h2>Compare Popular Models</h2>
+
+      <p class="section-label">
+        QUICK COMPARISON
+      </p>
+
+      <h2>
+        Compare Popular Models
+      </h2>
+
       <p>
         Use this table to compare the brand, price and sizes
         of our popular sneakers.
       </p>
+
     </div>
 
+
+
     <div class="table-container">
+
       <table>
+
         <thead>
+
         <tr>
           <th>Model</th>
           <th>Brand</th>
@@ -193,65 +507,161 @@
           <th>Available Sizes</th>
           <th>Status</th>
         </tr>
+
         </thead>
 
+
         <tbody>
+
+
         <tr>
-          <td>Air Max 270</td>
-          <td>Nike</td>
-          <td>65,000 KZT</td>
-          <td>39–44</td>
+
           <td>
-            <span class="stock in-stock">In Stock</span>
+            Air Max 270
           </td>
+
+          <td>
+            Nike
+          </td>
+
+          <td>
+            65,000 KZT
+          </td>
+
+          <td>
+            39–44
+          </td>
+
+          <td>
+            <span class="stock in-stock">
+              In Stock
+            </span>
+          </td>
+
         </tr>
+
+
 
         <tr class="best-choice">
+
           <td>
             Campus 00s
-            <span class="choice-badge">Best Choice</span>
+            <span class="choice-badge">
+              Best Choice
+            </span>
           </td>
-          <td>Adidas</td>
-          <td>58,000 KZT</td>
-          <td>38–43</td>
+
           <td>
-            <span class="stock in-stock">In Stock</span>
+            Adidas
           </td>
+
+          <td>
+            58,000 KZT
+          </td>
+
+          <td>
+            38–43
+          </td>
+
+          <td>
+            <span class="stock in-stock">
+              In Stock
+            </span>
+          </td>
+
         </tr>
 
-        <tr>
-          <td>New Balance 530</td>
-          <td>New Balance</td>
-          <td>62,000 KZT</td>
-          <td>39–44</td>
-          <td>
-            <span class="stock low-stock">Only 3 left</span>
-          </td>
-        </tr>
+
 
         <tr>
-          <td>Air Force 1</td>
-          <td>Nike</td>
-          <td>59,000 KZT</td>
-          <td>38–44</td>
+
           <td>
-            <span class="stock out-of-stock">Sold Out</span>
+            New Balance 530
           </td>
+
+          <td>
+            New Balance
+          </td>
+
+          <td>
+            62,000 KZT
+          </td>
+
+          <td>
+            39–44
+          </td>
+
+          <td>
+            <span class="stock low-stock">
+              Only 3 left
+            </span>
+          </td>
+
         </tr>
+
+
+
+        <tr>
+
+          <td>
+            Air Force 1
+          </td>
+
+          <td>
+            Nike
+          </td>
+
+          <td>
+            59,000 KZT
+          </td>
+
+          <td>
+            38–44
+          </td>
+
+          <td>
+            <span class="stock out-of-stock">
+              Sold Out
+            </span>
+          </td>
+
+        </tr>
+
+
         </tbody>
+
       </table>
+
     </div>
+
   </section>
+
 
 </main>
 
-<!-- Footer -->
+
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
+
   <p>
     Created by Tazhmaganbetov Rakhat and Tauyekel Islam | Group SE-2508
   </p>
-  <p>&copy; 2026 STEPUP Sneaker Store. All rights reserved.</p>
+
+  <p>
+    &copy; 2026 STEPUP Sneaker Store. All rights reserved.
+  </p>
+
 </footer>
 
+
+
+<!-- Bootstrap JavaScript -->
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
 </body>
+
 </html>

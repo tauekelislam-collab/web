@@ -37,7 +37,7 @@ a {
   border-bottom: 1px solid #333333;
 }
 
-.navbar {
+.navbar:not(.bootstrap-nav) {
   width: 90%;
   max-width: 1200px;
   min-height: 80px;
@@ -213,17 +213,34 @@ a {
   gap: 1.5rem;
 }
 
-.product-card {
+/* Product cards */
+
+/* For old product cards on Home page */
+.product-container .product-card {
   flex: 1;
   overflow: hidden;
   border: 1px solid #333333;
   border-radius: 14px;
   background-color: #1f1f1f;
-  transition: transform 0.3s;
+}
+
+/* Bootstrap Catalog cards */
+.product-card {
+  transition: transform 0.3s ease;
 }
 
 .product-card:hover {
   transform: translateY(-6px);
+}
+
+.product-card .card {
+  overflow: hidden;
+  border-radius: 14px;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover .card {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
 }
 
 .product-card img {
@@ -926,7 +943,7 @@ table tbody tr:hover {
   .about-image img {
     height: 320px;
   }
-  .navbar {
+  .navbar:not(.bootstrap-nav) {
     padding: 1rem 0;
     flex-direction: column;
     gap: 1rem;
@@ -1065,4 +1082,127 @@ table tbody tr:hover {
   .image-gallery {
     grid-template-columns: 1fr;
   }
+}
+/* Assignment 3 — Task 1: Responsive Typography */
+
+/* Mobile: less than 768px */
+.hero h1 {
+  font-size: 2rem;
+}
+
+.section-heading h2,
+.steps-content h2 {
+  font-size: 1.5rem;
+}
+
+.hero-description,
+.section-heading p:last-child,
+.benefit-card p {
+  font-size: 0.95rem;
+}
+
+/* Tablet: 768px and wider */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .section-heading h2,
+  .steps-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-description,
+  .section-heading p:last-child,
+  .benefit-card p {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop: 992px and wider */
+@media (min-width: 992px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .section-heading h2,
+  .steps-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-description,
+  .section-heading p:last-child,
+  .benefit-card p {
+    font-size: 1.1rem;
+  }
+}
+/* Assignment 3 — Task 2: Responsive Cards */
+
+/* Mobile: one card per row */
+.benefit-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Tablet: two cards per row */
+@media (min-width: 768px) {
+  .benefit-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: three cards per row */
+@media (min-width: 992px) {
+  .benefit-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Task 7: Carousel images */
+#sneakerCarousel .carousel-item img {
+  height: 280px;
+  object-fit: contain;
+  background-color: #222222;
+}
+
+#sneakerCarousel .carousel-indicators {
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+  #sneakerCarousel .carousel-item img {
+    height: 450px;
+  }
+}
+/* Bootstrap product card images */
+.sneaker-card-image {
+  height: 250px;
+  object-fit: cover;
+}
+/* Task 10: Keyboard accessibility */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  padding: 12px 20px;
+  background-color: #ffffff;
+  color: #111111;
+  font-weight: bold;
+  transform: translateY(-100%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Visible focus when navigating with a keyboard */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #ffcf33;
+  outline-offset: 4px;
 }

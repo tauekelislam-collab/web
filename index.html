@@ -7,54 +7,133 @@
   <!-- Created by Tazhmaganbetov Rakhat and Tauyekel Islam -->
   <title>Home | STEPUP Sneaker Store</title>
 
+  <!-- Bootstrap -->
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  >
+
+  <!-- Our styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
+<a class="skip-link px-3 py-2" href="#main-content">
+  Skip to main content
+</a>
 <!-- Website header and navigation -->
 <header id="main-header">
-  <nav class="navbar">
-    <a class="logo" href="index.html">STEPUP</a>
+  <nav
+          class="navbar bootstrap-nav navbar-expand-lg bg-dark py-3"
+          data-bs-theme="dark"
+          aria-label="Main navigation"
+  >
+    <div class="container">
 
-    <ul class="nav-menu">
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="catalog.html">Catalog</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+      <a
+              class="navbar-brand text-warning fw-bold fs-3"
+              href="index.html"
+      >
+        STEPUP
+      </a>
+
+      <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainMenu"
+              aria-controls="mainMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+
+          <li class="nav-item">
+            <a class="nav-link active fw-bold"
+               aria-current="page"
+               href="about.html">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="catalog.html">
+              Catalog
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">
+              Gallery
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              About Us
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              Contact
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="media-queries.html">
+              Media Queries
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
   </nav>
 </header>
 
-<main>
+<main id="main-content" tabindex="-1">
 
-  <!-- Main banner -->
-  <section class="hero">
-    <div class="hero-content">
-      <p class="hero-label">NEW COLLECTION 2026</p>
+  <!-- Main banner: two Bootstrap columns -->
+  <section class="container py-3 py-md-4 py-lg-5">
+    <div class="row align-items-center g-4">
 
-      <h1>Find Your Perfect Pair</h1>
+      <div class="col-12 col-lg-6">
+        <p class="hero-label mb-2">NEW COLLECTION 2026</p>
 
-      <p class="hero-description">
-        Discover stylish and comfortable sneakers from popular
-        brands. Choose the pair that matches your lifestyle.
-      </p>
+        <h1 class="display-4 fw-bold mb-3">
+          Find Your Perfect Pair
+        </h1>
 
-      <a class="button" href="catalog.html">Shop Now</a>
-    </div>
+        <p class="hero-description mb-4">
+          Discover stylish and comfortable sneakers from popular
+          brands. Choose the pair that matches your lifestyle.
+        </p>
 
-    <div class="hero-image">
-      <img
-        src="img/hero-sneakers.jpg"
-        alt="Modern white and pink sneakers"
-      >
+        <a class="btn btn-warning btn-lg" href="catalog.html">
+          Shop Now
+        </a>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <img
+                src="img/hero-sneakers.jpg"
+                alt="Modern white and pink sneakers"
+                class="img-fluid rounded-4 w-100"
+        >
+      </div>
+
     </div>
   </section>
 
   <!-- Benefits of the store -->
-  <section class="benefits">
-    <div class="section-heading">
+  <section class="benefits px-3 px-md-4 px-lg-5 py-3 py-md-4 py-lg-5">
+    <div class="section-heading mx-auto mt-0 mb-3 mb-lg-5">
       <p class="section-label">OUR BENEFITS</p>
       <h2>Why Choose STEPUP?</h2>
       <p>
@@ -62,8 +141,8 @@
       </p>
     </div>
 
-    <div class="benefit-container">
-      <article class="benefit-card">
+    <div class="benefit-container mx-auto">
+      <article class="benefit-card p-3 p-lg-4">
         <h3>Original Products</h3>
         <p>
           We offer authentic sneakers from trusted and popular
@@ -71,7 +150,7 @@
         </p>
       </article>
 
-      <article class="benefit-card">
+      <article class="benefit-card p-3 p-lg-4">
         <h3>Fast Delivery</h3>
         <p>
           We deliver orders quickly and carefully throughout
@@ -79,7 +158,7 @@
         </p>
       </article>
 
-      <article class="benefit-card">
+      <article class="benefit-card p-3 p-lg-4">
         <h3>Easy Returns</h3>
         <p>
           Customers can return or exchange unsuitable products
@@ -89,70 +168,271 @@
     </div>
   </section>
 
-  <!-- Popular models -->
-  <section class="popular-products">
-    <div class="section-heading">
+  <!-- Popular models: three Bootstrap columns -->
+  <section class="container py-3 py-md-4 py-lg-5">
+
+    <div class="section-heading mx-auto mt-0 mb-3 mb-lg-5">
       <p class="section-label">POPULAR MODELS</p>
       <h2>Trending Sneakers</h2>
       <p>
         Explore some of the most popular models in our collection.
       </p>
     </div>
+    <!-- Group of navigation buttons -->
+    <div class="text-center mb-4">
+      <div class="btn-group" role="group" aria-label="Store navigation">
 
-    <div class="product-container">
-      <article class="product-card">
-        <img
-          src="img/nike-air-max.jpg"
-          alt="Nike Air Max 270 sneakers"
+        <a class="btn btn-outline-warning" href="catalog.html">
+          Catalog
+        </a>
+
+        <a class="btn btn-outline-warning" href="gallery.html">
+          Gallery
+        </a>
+
+        <a class="btn btn-outline-warning" href="contact.html">
+          Contact
+        </a>
+
+      </div>
+    </div>
+
+
+      <!-- Task 8: Bootstrap cards -->
+
+    <!-- Task 8: Bootstrap cards -->
+    <div class="card-group row g-4">
+
+      <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 bg-dark text-white border-secondary">
+          <img
+                  src="img/nike-air-max.jpg"
+                  class="card-img-top sneaker-card-image"
+                  alt="Nike Air Max 270 sneakers"
+          >
+
+          <div class="card-body d-flex flex-column p-3 p-lg-4">
+            <p class="text-warning mb-2">Nike</p>
+
+            <h3 class="card-title h5">Nike Air Max 270</h3>
+
+            <p class="card-text">
+              Lightweight sneakers with soft cushioning
+              for comfortable everyday wear.
+            </p>
+
+            <p class="fw-bold text-warning mb-3">65,000 KZT</p>
+
+            <a
+                    class="btn btn-outline-warning btn-sm mt-auto align-self-start"
+                    href="catalog.html"
+            >
+              View product
+            </a>
+          </div>
+        </article>
+        </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 bg-dark text-white border-secondary">
+          <img
+                  src="img/adidas-campus.jpg"
+                  class="card-img-top sneaker-card-image"
+                  alt="Adidas Campus 00s sneakers"
+          >
+
+          <div class="card-body d-flex flex-column p-3 p-lg-4">
+            <p class="text-warning mb-2">Adidas</p>
+
+            <h3 class="card-title h5">Adidas Campus 00s</h3>
+
+            <p class="card-text">
+              Classic streetwear sneakers with a suede upper
+              and a comfortable fit.
+            </p>
+
+            <p class="fw-bold text-warning mb-3">58,000 KZT</p>
+
+            <a
+                    class="btn btn-outline-warning btn-sm mt-auto align-self-start"
+                    href="catalog.html"
+            >
+              View product
+            </a>
+          </div>
+        </article></div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100 bg-dark text-white border-secondary">
+          <img
+                  src="img/new-balance.jpg"
+                  class="card-img-top sneaker-card-image"
+                  alt="New Balance 530 sneakers"
+          >
+
+          <div class="card-body d-flex flex-column p-3 p-lg-4">
+            <p class="text-warning mb-2">New Balance</p>
+
+            <h3 class="card-title h5">New Balance 530</h3>
+
+            <p class="card-text">
+              Retro running-inspired sneakers with breathable
+              materials for daily comfort.
+            </p>
+
+            <p class="fw-bold text-warning mb-3">62,000 KZT</p>
+
+            <a
+                    class="btn btn-outline-warning btn-sm mt-auto align-self-start"
+                    href="catalog.html"
+            >
+              View product
+            </a>
+          </div>
+        </article> </div>
+
+      </div>
+  </section>
+  <!-- Task 7: Bootstrap Carousel -->
+  <section class="container py-3 py-md-4 py-lg-5">
+    <h2 class="text-center mb-4">Explore Our Collection</h2>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+
+        <div
+                id="sneakerCarousel"
+                class="carousel slide"
+                aria-label="Sneaker collection"
         >
 
-        <div class="product-info">
-          <p class="product-brand">Nike</p>
-          <h3>Nike Air Max 270</h3>
-          <p class="product-price">65,000 KZT</p>
-          <a class="product-link" href="catalog.html">
-            View product
-          </a>
+          <!-- Nine slide indicators -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#sneakerCarousel"
+                    data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+
+            <button type="button" data-bs-target="#sneakerCarousel"
+                    data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+            <button type="button" data-bs-target="#sneakerCarousel"
+                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+            <button type="button" data-bs-target="#sneakerCarousel"
+                    data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+            <button type="button" data-bs-target="#sneakerCarousel"
+                    data-bs-slide-to="4" aria-label="Slide 5"></button>
+
+            <button type="button" data-bs-target="#sneakerCarousel"
+                    data-bs-slide-to="5" aria-label="Slide 6"></button>
+
+            <button type="button" data-bs-target="#sneakerCarousel"
+                    data-bs-slide-to="6" aria-label="Slide 7"></button>
+
+            <button type="button" data-bs-target="#sneakerCarousel"
+                    data-bs-slide-to="7" aria-label="Slide 8"></button>
+
+            <button type="button" data-bs-target="#sneakerCarousel"
+                    data-bs-slide-to="8" aria-label="Slide 9"></button>
+          </div>
+
+          <!-- Images -->
+          <div class="carousel-inner rounded-4">
+
+            <div class="carousel-item active">
+              <img src="img/nike-air-max.jpg"
+                   class="d-block w-100"
+                   alt="Nike Air Max 270 sneakers">
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/nike-air-force.jpg"
+                   class="d-block w-100"
+                   alt="Nike Air Force 1 sneakers">
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/adidas-campus.jpg"
+                   class="d-block w-100"
+                   alt="Adidas Campus sneakers">
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/adidas-forum-low.jpg"
+                   class="d-block w-100"
+                   alt="Adidas Forum Low sneakers">
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/new-balance.jpg"
+                   class="d-block w-100"
+                   alt="New Balance 530 sneakers">
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/newbalance574.jpg"
+                   class="d-block w-100"
+                   alt="New Balance 574 sneakers">
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/puma-rsx.jpg"
+                   class="d-block w-100"
+                   alt="Puma RS-X sneakers">
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/converse-chuck.jpg"
+                   class="d-block w-100"
+                   alt="Converse Chuck Taylor sneakers">
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/vans-old-skool.jpg"
+                   class="d-block w-100"
+                   alt="Vans Old Skool sneakers">
+            </div>
+
+          </div>
+
+          <!-- Previous slide -->
+          <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#sneakerCarousel"
+                  data-bs-slide="prev"
+          >
+          <span
+                  class="carousel-control-prev-icon bg-dark rounded-circle p-3"
+                  aria-hidden="true"
+          ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <!-- Next slide -->
+          <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#sneakerCarousel"
+                  data-bs-slide="next"
+          >
+          <span
+                  class="carousel-control-next-icon bg-dark rounded-circle p-3"
+                  aria-hidden="true"
+          ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
         </div>
-      </article>
 
-      <article class="product-card">
-        <img
-          src="img/adidas-campus.jpg"
-          alt="Adidas Campus 00s sneakers">
-
-        <div class="product-info">
-          <p class="product-brand">Adidas</p>
-          <h3>Adidas Campus 00s</h3>
-          <p class="product-price">58,000 KZT</p>
-          <a class="product-link" href="catalog.html">
-            View product
-          </a>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <img
-          src="img/new-balance.jpg"
-          alt="New Balance 530 sneakers"
-        >
-
-        <div class="product-info">
-          <p class="product-brand">New Balance</p>
-          <h3>New Balance 530</h3>
-          <p class="product-price">62,000 KZT</p>
-          <a class="product-link" href="catalog.html">
-            View product
-          </a>
-        </div>
-      </article>
+      </div>
     </div>
   </section>
 
   <!-- Ordered list -->
   <section class="shopping-steps">
     <div class="steps-content">
-      <p class="section-label">HOW IT WORKS</p>
+      <p class="section-label text-dark">HOW IT WORKS</p>
       <h2>Order Your Sneakers in Three Steps</h2>
 
       <ol>
@@ -161,7 +441,7 @@
         <li>Send your order request through our contact page.</li>
       </ol>
 
-      <a class="button secondary-button" href="contact.html">
+      <a class="btn btn-outline-dark mt-3" href="contact.html">
         Make an Order
       </a>
     </div>
@@ -176,6 +456,6 @@
   </p>
   <p>&copy; 2026 STEPUP Sneaker Store. All rights reserved.</p>
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
