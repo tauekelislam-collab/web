@@ -658,7 +658,6 @@ table tbody tr:hover {
 }
 
 #order-form input[type="text"],
-#order-form input[type="email"],
 #order-form select,
 #order-form textarea {
   width: 100%;
