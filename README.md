@@ -17,7 +17,6 @@ Each team member is responsible for at least two HTML pages.
 - `gallery.html` — Responsive image gallery
 - `about.html` — About the store and team
 - `contact.html` — Contact and order form
-- `media-queries.html` — Responsive design demonstration
 
 ## Technologies Used
 
@@ -82,7 +81,6 @@ web/
 ├── gallery.html
 ├── about.html
 ├── contact.html
-├── media-queries.html
 ├── css/
 │   └── style.css
 └── img/
