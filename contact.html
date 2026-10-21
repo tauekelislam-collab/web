@@ -155,7 +155,7 @@
     <div class="form-wrapper p-3 p-lg-4">
       <h2>Order Request</h2>
 
-      <form id="order-form" data-bs-theme="dark">
+      <form id="order-form" data-bs-theme="dark" novalidate>
 
         <div class="row g-3">
 
@@ -310,26 +310,57 @@
 
   </section>
 
+<section class="interactive-section" aria-labelledby="account-heading">
+  <h2 id="account-heading">Create a STEPUP Account</h2>
+  <p>Practice registration form. No account is created or information saved. Use a sample password.</p>
+  <form id="account-form" class="demo-form" novalidate>
+    <label for="account-name">Name</label>
+    <input id="account-name" autocomplete="name" required aria-describedby="account-name-error">
+    <p class="field-error" id="account-name-error"></p>
+    <label for="account-email">Email</label>
+    <input id="account-email" type="email" autocomplete="email" required aria-describedby="account-email-error">
+    <p class="field-error" id="account-email-error"></p>
+    <label for="account-password">Password (at least 8 characters)</label>
+    <input id="account-password" type="password" autocomplete="new-password" required minlength="8" aria-describedby="account-password-error">
+    <p class="field-error" id="account-password-error"></p>
+    <label for="account-confirm">Confirm password</label>
+    <input id="account-confirm" type="password" autocomplete="new-password" required aria-describedby="account-confirm-error">
+    <p class="field-error" id="account-confirm-error"></p>
+    <button class="button" type="submit">Check Registration</button>
+    <p id="account-result" role="status"></p>
+  </form>
+</section>
 </main>
 
 <!-- Footer -->
 <footer>
+  <div class="site-tools">
+    <button class="button" type="button" id="change-background">Change Background</button>
+    <button class="button" type="button" id="open-subscription">Subscribe</button>
+  </div>
+  <p>Current local date and time: <time id="current-time"></time></p>
+
   <p>
     Created by Tazhmaganbetov Rakhat and Tauekel Islam |
     Group SE-2508
   </p>
   <p>&copy; 2026 STEPUP Sneaker Store. All rights reserved.</p>
 </footer>
-<script>
-  const orderForm = document.getElementById("order-form");
 
-  orderForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    document.getElementById("form-result").textContent =
-            "The form is valid. This is a demo; no request was sent.";
-  });
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<dialog id="subscription-dialog" aria-labelledby="subscription-heading">
+  <button type="button" id="close-subscription" class="dialog-close" aria-label="Close subscription form">&times;</button>
+  <h2 id="subscription-heading">Stay in the Loop</h2>
+  <p>Try our demo subscription. No email is sent or saved.</p>
+  <form id="subscription-form" class="demo-form" novalidate>
+    <label for="subscription-email">Email</label>
+    <input id="subscription-email" type="email" autocomplete="email" required aria-describedby="subscription-error">
+    <p class="field-error" id="subscription-error"></p>
+    <button class="button" type="submit">Check Subscription</button>
+    <p id="subscription-result" role="status"></p>
+  </form>
+</dialog>
+<script src="./js/script.js" defer></script>
 </body>
 </html>

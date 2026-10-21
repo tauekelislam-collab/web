@@ -98,3 +98,15 @@ During the defense, we can explain:
 - form controls and validation
 - image responsiveness
 - how to make small live HTML/CSS changes
+
+## Assignment 4 — JavaScript
+
+Custom code: `js/script.js` (linked on all five pages).
+
+- Contact: registration validation (name, email, minimum 8-character password and confirmation), plus original order validation.
+- Home: smoothly animated FAQ accordion.
+- Every footer: subscription popup, background color cycle and local live clock.
+- Popup supports close button, backdrop click, Escape and native modal keyboard focus.
+- Forms are client-side demonstrations; they do not save accounts, place orders or send emails.
+
+See `ASSIGNMENT4.md` for a demonstration and defense guide and the remaining report requirements.
