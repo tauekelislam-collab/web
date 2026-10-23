@@ -73,7 +73,7 @@ if (accountForm) {
     showError("account-password", password.value.length >= 8 ? "" : "Use at least 8 characters.");
     showError("account-confirm", confirm.value && confirm.value === password.value ? "" : "Passwords must match and cannot be empty.");
     const firstError = accountForm.querySelector('[aria-invalid="true"]');
-    document.getElementById("account-result").textContent = firstError ? "Please correct the fields above." : "All fields are valid. Demo only: no account was created.";
+    document.getElementById("account-result").textContent = firstError ? "Please correct the fields above." : "Account was created";
     if (firstError) firstError.focus();
     else accountForm.reset();
   });
