@@ -86,7 +86,7 @@ subscriptionForm.addEventListener("submit", function (event) {
   const valid = validEmail(email);
   document.getElementById("subscription-error").textContent = valid ? "" : "Enter a valid email address.";
   email.setAttribute("aria-invalid", String(!valid));
-  document.getElementById("subscription-result").textContent = valid ? "Valid email! Demo only: no subscription was saved." : "";
+  document.getElementById("subscription-result").textContent = valid ? "Valid email!." : "";
   if (!valid) email.focus();
 });
 
