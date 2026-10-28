@@ -110,3 +110,12 @@ Custom code: `js/script.js` (linked on all five pages).
 - Forms are client-side demonstrations; they do not save accounts, place orders or send emails.
 
 See `ASSIGNMENT4.md` for a demonstration and defense guide and the remaining report requirements.
+
+## Assignment 5 — Advanced JavaScript and DOM
+
+- Catalog: combined brand/budget/search filters, live result count, empty state and personal star ratings.
+- Contact: validated three-step demo order form with Back, Next, review and reset.
+- All pages: arrow-key navigation and optional notification sounds.
+- Event-triggered animations respect reduced-motion preferences.
+- New files: `js/assignment5.js` and `css/assignment5.css`.
+- See `ASSIGNMENT5.md` for the requirement mapping and defense walkthrough.

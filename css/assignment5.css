@@ -1,0 +1,21 @@
+/* Assignment 5 additions reuse STEPUP's existing dark and orange palette. */
+[hidden] { display: none !important; }
+.catalog-filters { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; padding: 1.25rem; margin-bottom: 1rem; border: 1px solid #555; border-radius: 12px; background: #202020; }
+.catalog-filters > div { flex: 1 1 170px; }
+.catalog-filters label { display: block; margin-bottom: .4rem; font-weight: bold; }
+.catalog-filters select, .catalog-filters input { width: 100%; min-height: 44px; padding: .6rem; border: 1px solid #888; border-radius: 6px; color: white; background: #292929; font: inherit; }
+.catalog-filters .button { min-height: 44px; }
+.product-rating { display: flex; flex-wrap: wrap; margin-top: 1.2rem; }
+.rating-star { min-width: 44px; min-height: 44px; padding: 0; border: 0; background: transparent; color: #aaa; font-size: 1.8rem; transition: color .15s, transform .15s; }
+.rating-star.is-selected { color: #ffcf33; }
+.rating-star:hover { transform: scale(1.15); }
+.rating-message { color: #ddd; font-size: .85rem; margin: .3rem 0 0; }
+.order-step { border: 0; padding: 0; margin: 1rem 0; min-width: 0; }
+.order-step legend { font-size: 1.2rem; color: #ffcf33; margin-bottom: 1rem; }
+.order-actions { display: flex; flex-wrap: wrap; gap: .65rem; }
+.order-actions .button { min-height: 44px; }
+#order-progress { margin-top: 1.5rem; color: #ffcf33; }
+#order-summary { padding: 1rem; background: #171717; border-radius: 8px; overflow-wrap: anywhere; }
+#order-summary dt { color: #ffcf33; }
+#order-summary dd { margin: 0 0 .6rem; white-space: pre-wrap; }
+@media (prefers-reduced-motion: reduce) { .rating-star { transition: none; } }

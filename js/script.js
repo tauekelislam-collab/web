@@ -89,19 +89,3 @@ subscriptionForm.addEventListener("submit", function (event) {
   document.getElementById("subscription-result").textContent = valid ? "Valid email!." : "";
   if (!valid) email.focus();
 });
-
-// Preserve the existing demo order form and validate its required controls.
-const orderForm = document.getElementById("order-form");
-if (orderForm) {
-  orderForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-    const name = document.getElementById("customer-name");
-    name.setCustomValidity(name.value.trim() ? "" : "Enter your name.");
-    const valid = orderForm.reportValidity();
-    document.getElementById("form-result").textContent = valid ?
-      "The form is valid. This is a demo; no request was sent." : "Please complete all required fields correctly.";
-  });
-  document.getElementById("customer-name").addEventListener("input", function () {
-    this.setCustomValidity("");
-  });
-}
