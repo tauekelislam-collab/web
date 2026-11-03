@@ -7,7 +7,7 @@ Website: https://tauekelislam-collab.github.io/web/
 ## Implementation and demonstration
 
 1. **DOM selection and content:** open Catalog. `initializeCatalog()` selects existing product cards with `querySelectorAll`, reads their names, brands and prices into an array of objects, then updates the result count with `textContent`.
-2. **Dynamic styles:** the existing footer Change Background button updates `document.body.style.backgroundColor`. Day/night mode is an alternative in the assignment, not an additional requirement.
+2. **Dynamic styles:** the existing footer Change Background button updates `document.body.style.backgroundColor`. Day/night mode is an alternative in the assignment; it is now also implemented using the header toggle, with the choice saved in localStorage.
 3. **Chosen interactive option — star rating:** each catalog card has five buttons. Click a star to set your personal rating for this visit. A loop creates the buttons, a callback updates the object's rating, `classList.toggle` changes their color, and `setAttribute` updates accessible pressed state. Refreshing clears ratings; these are not public customer reviews.
 4. **Button event listeners:** filter reset, rating, sound and form buttons use `addEventListener`. Reset filters restores all six models without a reload.
 5. **Keyboard navigation:** focus a top navigation link using Tab. Arrow keys move between links and wrap at the ends. Home/End move to the first/last link. Enter follows the focused link. On mobile, expand the menu first.

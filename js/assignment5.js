@@ -94,16 +94,17 @@ function initializeCatalog() {
   function applyFilters() {
     const query = search.value.trim().toLowerCase();
     // filter is a higher-order function: it receives a predicate callback.
-    const matches = products.filter(product =>
-      (brand.value === "all" || product.brand === brand.value) &&
-      matchesBudget(product) && product.name.toLowerCase().includes(query)
-    );
+    const matches = $(products).filter(function () {
+      const product = this;
+      return (brand.value === "all" || product.brand === brand.value) &&
+      matchesBudget(product) && product.name.toLowerCase().includes(query);
+    }).get();
     products.forEach(product => { product.card.hidden = !matches.includes(product); });
     document.getElementById("catalog-count").textContent = `${matches.length} of ${products.length} sneakers shown`;
     document.getElementById("catalog-empty").hidden = matches.length !== 0;
     animateElement(document.getElementById("catalog-products"));
   }
-  filters.addEventListener("input", applyFilters);
+  $(filters).on("input change", applyFilters);
   filters.addEventListener("submit", event => event.preventDefault());
   filters.addEventListener("reset", function (event) {
     event.preventDefault();
@@ -228,9 +229,12 @@ function initializeOrderForm() {
       const invalid = Array.from(steps[index].querySelectorAll("input, select, textarea")).some(control => !control.checkValidity());
       if (invalid) { showStep(index); validateStep(index); return; }
     }
-    result.textContent = `Thanks, ${name.value.trim()}! Your request is valid. Demo only: no order was sent or saved.`;
-    animateElement(result);
-    storeSound.play();
+    const customer = name.value.trim();
+    window.submitDemo(form, submit, function () {
+      result.textContent = `Thanks, ${customer}! Your request is valid. Demo only: no order was sent or saved.`;
+      animateElement(result);
+      storeSound.play();
+    });
   });
   form.addEventListener("reset", function () {
     // Reset's default action runs after this handler; wait before updating the UI.

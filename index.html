@@ -16,9 +16,15 @@
   <!-- Our styles -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="./css/assignment5.css">
+  <link rel="stylesheet" href="./css/assignment6.css">
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js" defer></script>
+  <script src="./vendor/jquery/jquery-fallback.js" defer></script>
+  <script src="./js/theme.js" defer></script>
+  <script src="./js/assignment6.js" defer></script>
 </head>
 
 <body>
+<div id="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
 <a class="skip-link px-3 py-2" href="#main-content">
   Skip to main content
 </a>
@@ -50,6 +56,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <button type="button" class="btn btn-outline-warning ms-3" id="theme-toggle" aria-pressed="false">Day mode</button>
       <div class="collapse navbar-collapse" id="mainMenu">
         <ul class="navbar-nav ms-auto gap-lg-3">
 
@@ -126,6 +133,13 @@
     </div>
   </section>
 
+  <section class="container py-4" aria-label="Our collection in numbers">
+    <div class="store-stats">
+      <p><strong class="number-counter" data-target="6">0</strong>Available models</p>
+      <p><strong class="number-counter" data-target="3">0</strong>Featured brands</p>
+      <p><strong class="number-counter" data-target="9">0</strong>Gallery styles</p>
+    </div>
+  </section>
   <!-- Benefits of the store -->
   <section class="benefits px-3 px-md-4 px-lg-5 py-3 py-md-4 py-lg-5">
     <div class="section-heading mx-auto mt-0 mb-3 mb-lg-5">
@@ -475,5 +489,6 @@
 </dialog>
 <script src="./js/script.js" defer></script>
 <script src="./js/assignment5.js" defer></script>
+<div id="store-toast" role="status" aria-live="polite" hidden></div>
 </body>
 </html>

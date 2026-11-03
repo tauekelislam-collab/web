@@ -3,7 +3,9 @@ const backgroundColors = ["#111111", "#172338", "#263329", "#302238"];
 let colorIndex = 0;
 document.getElementById("change-background").addEventListener("click", function () {
   colorIndex = (colorIndex + 1) % backgroundColors.length;
-  document.body.style.backgroundColor = backgroundColors[colorIndex];
+  document.body.style.backgroundColor = document.documentElement.dataset.theme === "light"
+    ? ["#fafafa", "#edf3ff", "#eef6ef", "#f8effa"][colorIndex]
+    : backgroundColors[colorIndex];
 });
 
 // Task 5: Date uses the visitor's local timezone.

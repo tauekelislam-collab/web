@@ -13,9 +13,15 @@
   >
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/assignment5.css">
+  <link rel="stylesheet" href="./css/assignment6.css">
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js" defer></script>
+  <script src="./vendor/jquery/jquery-fallback.js" defer></script>
+  <script src="./js/theme.js" defer></script>
+  <script src="./js/assignment6.js" defer></script>
 </head>
 
 <body>
+<div id="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
 <a class="skip-link px-3 py-2" href="#main-content">
   Skip to main content
 </a>
@@ -47,6 +53,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <button type="button" class="btn btn-outline-warning ms-3" id="theme-toggle" aria-pressed="false">Day mode</button>
       <div class="collapse navbar-collapse" id="mainMenu">
         <ul class="navbar-nav ms-auto gap-lg-3">
 
@@ -320,6 +327,12 @@
 
   </section>
 
+<section class="interactive-section" aria-labelledby="share-heading">
+  <h2 id="share-heading">Share our catalog</h2>
+  <p id="catalog-link">https://tauekelislam-collab.github.io/web/catalog.html</p>
+  <button class="button" type="button" id="copy-catalog" aria-describedby="copy-feedback"><span class="copy-icon" aria-hidden="true">⧉</span> Copy link</button>
+  <span id="copy-feedback" role="status"></span>
+</section>
 <section class="interactive-section" aria-labelledby="account-heading">
   <h2 id="account-heading">Create a STEPUP Account</h2>
   <p>Practice registration form. No account is created or information saved. Use a sample password.</p>
@@ -374,5 +387,6 @@
 </dialog>
 <script src="./js/script.js" defer></script>
 <script src="./js/assignment5.js" defer></script>
+<div id="store-toast" role="status" aria-live="polite" hidden></div>
 </body>
 </html>

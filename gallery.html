@@ -19,9 +19,15 @@
   >
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/assignment5.css">
+  <link rel="stylesheet" href="./css/assignment6.css">
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js" defer></script>
+  <script src="./vendor/jquery/jquery-fallback.js" defer></script>
+  <script src="./js/theme.js" defer></script>
+  <script src="./js/assignment6.js" defer></script>
 </head>
 
 <body class="gallery-layout">
+<div id="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
 
 <!-- Grid area: Header -->
 <header id="main-header">
@@ -51,6 +57,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <button type="button" class="btn btn-outline-warning ms-3" id="theme-toggle" aria-pressed="false">Day mode</button>
       <div class="collapse navbar-collapse" id="mainMenu">
         <ul class="navbar-nav ms-auto gap-lg-3">
 
@@ -156,8 +163,7 @@
 
     <!-- Image 1 -->
     <figure class="gallery-item" id="nike">
-      <img
-        src="./img/nike-air-max.jpg"
+      <img class="lazy-image" data-src="./img/nike-air-max.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
         alt="Nike Air Max 270 sneakers"
       >
 
@@ -169,8 +175,7 @@
 
     <!-- Image 2 -->
     <figure class="gallery-item">
-      <img
-        src="./img/nike-air-force.jpg"
+      <img class="lazy-image" data-src="./img/nike-air-force.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
         alt="Nike Air Force 1 sneakers"
       >
 
@@ -182,8 +187,7 @@
 
     <!-- Image 3 -->
     <figure class="gallery-item" id="adidas">
-      <img
-        src="./img/adidas-campus.jpg"
+      <img class="lazy-image" data-src="./img/adidas-campus.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
         alt="Adidas Campus 00s sneakers"
       >
 
@@ -195,8 +199,7 @@
 
     <!-- Image 4 -->
     <figure class="gallery-item">
-      <img
-        src="./img/adidas-forum-low.jpg"
+      <img class="lazy-image" data-src="./img/adidas-forum-low.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
         alt="Adidas Forum Low sneakers"
       >
 
@@ -208,8 +211,7 @@
 
     <!-- Image 5 -->
     <figure class="gallery-item" id="new-balance">
-      <img
-        src="./img/new-balance.jpg"
+      <img class="lazy-image" data-src="./img/new-balance.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
         alt="New Balance 530 sneakers"
       >
 
@@ -221,8 +223,7 @@
 
     <!-- Image 6 -->
     <figure class="gallery-item">
-      <img
-        src="./img/newbalance574.jpg"
+      <img class="lazy-image" data-src="./img/newbalance574.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
         alt="New Balance 574 sneakers"
       >
 
@@ -237,8 +238,7 @@
       class="gallery-item coming-soon-item"
       id="coming-soon"
     >
-      <img
-        src="./img/puma-rsx.jpg"
+      <img class="lazy-image" data-src="./img/puma-rsx.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
         alt="Puma RS-X sneakers coming soon"
       >
 
@@ -254,8 +254,7 @@
 
     <!-- New image 8 -->
     <figure class="gallery-item coming-soon-item">
-      <img
-        src="./img/converse-chuck.jpg"
+      <img class="lazy-image" data-src="./img/converse-chuck.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
         alt="Converse Chuck 70 sneakers coming soon"
       >
 
@@ -271,8 +270,7 @@
 
     <!-- New image 9 -->
     <figure class="gallery-item coming-soon-item">
-      <img
-        src="./img/vans-old-skool.jpg"
+      <img class="lazy-image" data-src="./img/vans-old-skool.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
         alt="Vans Old Skool sneakers coming soon"
       >
 
@@ -325,5 +323,6 @@
 </dialog>
 <script src="./js/script.js" defer></script>
 <script src="./js/assignment5.js" defer></script>
+<div id="store-toast" role="status" aria-live="polite" hidden></div>
 </body>
 </html>

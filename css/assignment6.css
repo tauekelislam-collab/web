@@ -1,0 +1,45 @@
+/* Assignment 6: small additions to the existing STEPUP design. */
+#scroll-progress { position: fixed; top: 0; left: 0; width: 0; height: 5px; z-index: 3000; background: linear-gradient(90deg, #ff5c00, #ffcf33, #ed6aab); box-shadow: 0 0 12px #ff5c0088; }
+#store-toast { position: fixed; right: 1rem; bottom: 1rem; max-width: min(400px, calc(100vw - 2rem)); padding: 1rem 1.4rem; z-index: 2500; border: 1px solid #ffb703; border-radius: 12px; color: #fff; background: #252525; box-shadow: 0 8px 24px #0005; }
+#search-suggestions { margin-top: .5rem; border: 1px solid #777; border-radius: 8px; overflow: hidden; }
+#search-suggestions button { display: block; width: 100%; padding: .6rem; border: 0; border-bottom: 1px solid #555; text-align: left; color: #fff; background: #292929; }
+#search-suggestions button:hover, #search-suggestions button:focus { background: #4c390f; }
+mark { color: #171717; background: #ffcf33; padding: 0 .05em; border-radius: 3px; }
+.store-stats { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 1rem; padding: 1.5rem; border: 1px solid #777; border-radius: 16px; text-align: center; }
+.store-stats p { margin: 0; }
+.number-counter { display: block; color: #ffb703; font-size: 2.5rem; }
+.submit-spinner { display: inline-block; width: 1em; height: 1em; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: spin .7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+button:disabled { opacity: .65; cursor: wait; }
+#catalog-link { overflow-wrap: anywhere; }
+#copy-feedback { display: inline-block; margin: .6rem; }
+/* All surfaces, form fields and text remain readable in Day mode. */
+html[data-theme="light"] { color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; }
+html[data-theme="light"] body { background: #fafafa; color: #202020; }
+html[data-theme="light"] :is(#main-header, .bootstrap-nav.bg-dark, footer, .benefits, .gallery-sidebar, .page-banner) { background: #eee !important; color: #202020 !important; }
+html[data-theme="light"] :is(.card.bg-dark, .benefit-card, .value-card, .team-card, .contact-card, .form-wrapper, .catalog-filters, #order-summary, #subscription-dialog, .gallery-item) { background: #fff !important; color: #202020 !important; border-color: #c5c5c5 !important; }
+html[data-theme="light"] :is(.hero-description, .section-heading p:last-child, .benefit-card p, .product-brand, .rating-message, .about-text p, .value-card p, .team-card p, .contact-card p, .working-hours, .agreement, .sidebar-note, .gallery-introduction p, .faq-answer p, .page-banner p) { color: #505050; }
+html[data-theme="light"] :is(.faq-question, .dialog-close, .sidebar-menu a, .product-link, .form-group label, .form-group legend) { color: #202020; }
+html[data-theme="light"] :is(.catalog-filters input, .catalog-filters select, .demo-form input, #order-form input, #order-form select, #order-form textarea, .radio-options label, #search-suggestions button) { background: #fff; color: #202020; border-color: #888; }
+html[data-theme="light"] #search-suggestions button:hover, html[data-theme="light"] #search-suggestions button:focus { background: #ffedc3; }
+html[data-theme="light"] :is(.text-warning, .hero-label, .section-label, .product-price, .benefit-card h3, .contact-card h3, .number-counter, #order-progress, #order-summary dt, .order-step legend) { color: #a33b00 !important; }
+html[data-theme="light"] .btn-outline-warning { color: #8b4000; border-color: #9c4700; }
+html[data-theme="light"] .btn-outline-warning:hover { color: #111; background: #ffcf33; }
+html[data-theme="light"] .button { background: #ae3f00; border-color: #ae3f00; color: white; }
+html[data-theme="light"] .button:hover { background: #853000; }
+html[data-theme="light"] .rating-star { color: #666; }
+html[data-theme="light"] .rating-star.is-selected { color: #946600; }
+html[data-theme="light"] .field-error { color: #a11a1a; }
+html[data-theme="light"] .table-dark { --bs-table-bg: #fff; --bs-table-color: #202020; --bs-table-border-color: #ccc; --bs-table-striped-bg: #eee; --bs-table-striped-color: #202020; --bs-table-hover-bg: #ddd; --bs-table-hover-color: #202020; }
+html[data-theme="light"] .in-stock { color: #126a2a; }
+html[data-theme="light"] .low-stock { color: #744d00; }
+html[data-theme="light"] .out-of-stock { color: #9b2020; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .submit-spinner { animation: none; } }
+html[data-theme="light"] :is(.comparison-section, .values-section, .team-section) { background: #eee; }
+html[data-theme="light"] table { background: #fff; }
+html[data-theme="light"] table td { color: #303030; }
+html[data-theme="light"] table tbody tr:hover { background: #eee; }
+html[data-theme="light"] .page-banner p:last-child { color: #505050; }
+html[data-theme="light"] :is(.contact-information > p:not(.section-label), .team-card > p:not(.team-role), .member-tasks) { color: #505050; }
+html[data-theme="light"] input::placeholder, html[data-theme="light"] textarea::placeholder { color: #666; opacity: 1; }
